@@ -1,0 +1,18 @@
+"0","groupCountry1<-b%>%
+  group_by(`對方學校(機構)國別(地區)`)%>%
+  tally(nCountry,sort=TRUE)%>%
+  group_by(`對方學校(機構)國別(地區)` = factor(c(`對方學校(機構)國別(地區)`[1:10], rep(""Other"", n() - 10)),
+                       levels = c(`對方學校(機構)國別(地區)`[1:10], ""Other"")))%>%
+  tally(n)
+"
+"2","Error in b %>% group_by(`對方學校(機構)國別(地區)`) %>% tally(nCountry,  : 
+  could not find function ""%>%""
+"
+"2","In addition: "
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
